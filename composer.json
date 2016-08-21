@@ -1,6 +1,7 @@
 {
   "name": "weirongxu/laravel-query-route",
-  "description": "laravel routing in url's query",
+  "description": "laravel5 routing into url's query",
+  "keywords": ["laravel", "route", "htaccess"],
   "license": "MIT",
   "authors": [
     {
@@ -15,5 +16,6 @@
   },
   "require": {
     "illuminate/support": "5.1.*|5.2.*|5.3.*"
-  }
+  },
+  "minimum-stability": "stable"
 }
