@@ -8,6 +8,14 @@ class Request extends \Illuminate\Http\Request
 {
     public function getPathInfo()
     {
-        return $this->query->get(Config::get('query-route.query_name'), parent::getPathInfo());
+        $query_name = Config::get('query-route.query_name');
+        if (
+            Config::get('query-route.enabled', true)
+            && $this->query->has($query_name)
+        ) {
+            return $this->query->get($query_name);
+        } else {
+            return parent::getPathInfo();
+        }
     }
 }

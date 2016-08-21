@@ -3,6 +3,7 @@
 namespace Weirongxu\LaravelQueryRoute;
 
 use Exception;
+use Illuminate\Support\Facades\Config;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -23,9 +24,12 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         if (! $this->app->bound('routes')) {
             throw new Exception('routes provider must register before query-route');
         }
-        $this->app['url'] = $this->app->share(function($app) {
-            return new UrlGenerator($app['routes'], $app['request']);
-        });
+
+        if (Config::get('query-route.enabled', true)) {
+            $this->app['url'] = $this->app->share(function($app) {
+                return new UrlGenerator($app['routes'], $app['request']);
+            });
+        }
 
         $this->publishes([
             __DIR__ . '/../config/query-route.php' => config_path('query-route.php')
