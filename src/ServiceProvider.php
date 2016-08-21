@@ -2,10 +2,9 @@
 
 namespace Weirongxu\LaravelQueryRoute;
 
-use Illuminate\Support\ServiceProvider;
 use Exception;
 
-class Provider extends ServiceProvider
+class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
@@ -28,7 +27,9 @@ class Provider extends ServiceProvider
             return new UrlGenerator($app['routes'], $app['request']);
         });
 
-        $this->publishes(__DIR__ . '/../config/query-route.php', config_path('query-route.php'));
+        $this->publishes([
+            __DIR__ . '/../config/query-route.php' => config_path('query-route.php')
+        ], 'config');
     }
 
     /**
