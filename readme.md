@@ -17,6 +17,7 @@ composer require weirongxu/laravel-query-route
 ```
   
 Add the service provider to `app/config/app.php`
+> Note: The `App\Providers\RouteServiceProvider::class` must before this provider
 
 ```php
 Weirongxu\LaravelQueryRoute\ServiceProvider::class,
