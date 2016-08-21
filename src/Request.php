@@ -8,7 +8,7 @@ class Request extends \Illuminate\Http\Request
 {
     public function getPathInfo()
     {
-        $query_name = Config::get('query-route.query_name');
+        $query_name = Config::get('query-route.query_name', '_');
         if (
             Config::get('query-route.enable', true)
             && $this->query->has($query_name)
