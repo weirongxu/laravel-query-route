@@ -25,7 +25,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             throw new Exception('routes provider must register before query-route');
         }
 
-        if (Config::get('query-route.enabled', true)) {
+        if (Config::get('query-route.enable', true)) {
             $this->app['url'] = $this->app->share(function($app) {
                 return new UrlGenerator($app['routes'], $app['request']);
             });

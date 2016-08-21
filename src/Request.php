@@ -10,7 +10,7 @@ class Request extends \Illuminate\Http\Request
     {
         $query_name = Config::get('query-route.query_name');
         if (
-            Config::get('query-route.enabled', true)
+            Config::get('query-route.enable', true)
             && $this->query->has($query_name)
         ) {
             return $this->query->get($query_name);

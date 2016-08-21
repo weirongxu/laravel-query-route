@@ -2,9 +2,9 @@
 
 return [
     /*
-     * QueryRoute is enabled by default
+     * QueryRoute enable
      */
-    'enabled' => null,
+    'enable' => true,
 
     /*
      * This name of routing url's query
