@@ -1,0 +1,24 @@
+{
+  "name": "weirongxu/laravel-query-route",
+  "description": "laravel routing in url's query",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Weirong Xu",
+      "email": "weirongxu.raidou@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Weirongxu\\LaravelQueryRoute\\": "src"
+    }
+  },
+  "require": {
+    "illuminate/support": "5.1.*|5.2.*|5.3.*"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
