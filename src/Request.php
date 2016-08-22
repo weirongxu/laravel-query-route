@@ -13,7 +13,9 @@ class Request extends \Illuminate\Http\Request
             Config::get('query-route.enable', true)
             && $this->query->has($query_name)
         ) {
-            return $this->query->get($query_name);
+            $pathInfo = $this->query->get($query_name);
+            $this->query->remove($query_name);
+            return $pathInfo;
         } else {
             return parent::getPathInfo();
         }
