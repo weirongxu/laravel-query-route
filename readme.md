@@ -37,3 +37,9 @@ Generate package config by the publish command
 ```bash
 php artisan vendor:publish --provider="Weirongxu\\LaravelQueryRoute\\ServiceProvider" --tag config
 ```
+
+## Configuration
+the underscore path indicator "_" can be customized in config/query-route.php.
+Set query_name to "rpath" for example:
+* `http://localhost/path/to/?a=1&b=2` to `http://localhost/?a=1&b=2&rpath=/path/to/`
+
