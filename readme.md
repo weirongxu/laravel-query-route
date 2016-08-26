@@ -1,6 +1,6 @@
 # laravel-query-route
 
-laravel5 routing into url's query
+laravel5 routing into url query
 
 Its useful when you can not use `.htaccess`
 
@@ -23,7 +23,7 @@ Add the service provider to `app/config/app.php`
 Weirongxu\LaravelQueryRoute\ServiceProvider::class,
 ```
 
-Use the `Weirongxu\LaravelQueryRoute\Request` replace laravel's request in `public/index.php`
+Use the `Weirongxu\LaravelQueryRoute\Request` replace laravel request in `public/index.php`
 
 ```php
 $response = $kernel->handle(

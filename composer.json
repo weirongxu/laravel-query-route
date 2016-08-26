@@ -1,6 +1,6 @@
 {
   "name": "weirongxu/laravel-query-route",
-  "description": "laravel5 routing into url's query",
+  "description": "laravel5 routing into url query",
   "keywords": ["laravel", "route", "htaccess"],
   "license": "MIT",
   "authors": [

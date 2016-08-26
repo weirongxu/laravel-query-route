@@ -7,7 +7,7 @@ return [
     'enable' => true,
 
     /*
-     * This name of routing url's query
+     * This name of routing url query
      */
     'query_name' => '_',
 ];
