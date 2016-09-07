@@ -14,7 +14,7 @@ class Request extends \Illuminate\Http\Request
             && $this->query->has($query_name)
         ) {
             $pathInfo = $this->query->get($query_name);
-            $this->query->remove($query_name);
+            // $this->query->remove($query_name);
             return $pathInfo;
         } else {
             return parent::getPathInfo();
