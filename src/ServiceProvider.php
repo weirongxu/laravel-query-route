@@ -26,9 +26,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         }
 
         if (Config::get('query-route.enable', true)) {
-            $this->app['url'] = $this->app->share(function($app) {
-                return new UrlGenerator($app['routes'], $app['request']);
-            });
+            $this->app['url'] = new UrlGenerator($this->app['routes'], $this->app['request']);
         }
 
         $this->publishes([
