@@ -15,24 +15,26 @@ Install with composer
 ```bash
 composer require weirongxu/laravel-query-route
 ```
-  
-Add the service provider to `app/config/app.php`
-> Note: The `App\Providers\RouteServiceProvider::class` must before this provider
+
+### Add the service provider to `config/app.php`
 
 ```php
+<?php
 Weirongxu\LaravelQueryRoute\ServiceProvider::class,
+// Note: The `App\Providers\RouteServiceProvider::class` must before this provider
 ```
 
-Use the `Weirongxu\LaravelQueryRoute\Request` replace laravel request in `public/index.php`
+### Use the `Weirongxu\LaravelQueryRoute\Request` replace laravel request in `public/index.php`
 
 ```php
+<?php
 $response = $kernel->handle(
     // $request = Illuminate\Http\Request::capture()
     $request = Weirongxu\LaravelQueryRoute\Request::capture()
 );
 ```
 
-Generate package config by the publish command
+### Generate package config by the publish command
 
 ```bash
 php artisan vendor:publish --provider="Weirongxu\\LaravelQueryRoute\\ServiceProvider" --tag config
