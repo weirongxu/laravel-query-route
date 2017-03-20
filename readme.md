@@ -1,6 +1,6 @@
 # laravel-query-route
 
-laravel5 routing into url query
+Change laravel5 routing into query
 
 Its useful when you can not use `.htaccess`
 
